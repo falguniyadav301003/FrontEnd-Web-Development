@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Personal Webpage</title>
+    </head>
+    <body>
+        <header>
+            <h1 style="text-align: center;"> Welcome to My Personal Webpage</h1>
+            <hr>
+        </header>
+        <main>
+            <section id="About">
+                <h2>About Me</h2>
+                <p>Hi, I am Falguni Yadav ! I am a third year Computer Science student at Adamas University, Kolkata.
+                     I am passionate about software development, problem-solving, and exploring cutting-edge technologies.</p>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Programming Languages: C, C++, Java, Python</li>
+                    <li>Web Development: HTML, CSS, JavaScript</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Database Management: SQL,MongoDB</li>
+                    <li>UI/UX Design: Canva,figma</li>
+                </ul>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li>Portfolio Website</li>
+                    <li>Facebook Desktop Views</li>
+                    <li>Carousel</li>
+                    <li>Calculator</li>
+                </ul>
+            </section>
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <ul>
+                <li><strong>Phone no.:</strong> 7501756156</li>
+                <li><strong>Email:</strong> <a href="mailto:falguniyadav1430@gmail.com">falguniyadav1430@gmail.com</a> </li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/falguni-yadav-17620424a?u
+                    tm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Falguni Yadav</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/falguniyadav301003" target="_blank">falguniyadav301003<a></li>
+            </ul>
+            </section>
+        </main>
+        <hr>
+        <footer>
+            <p>&copy; Falguni Yadav | All Rights Reserved | 2024</p>
+        </footer>
+    </body>
+    </html>
+        </main>
+    </body>
+</html>
