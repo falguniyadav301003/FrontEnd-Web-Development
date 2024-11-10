@@ -5,7 +5,11 @@
     </head>
     <body>
         <header>
-            <h1 style="text-align: center;"> Welcome to My Personal Webpage</h1>
+            <h1>
+                <center>
+                    Welcome to My Personal Webpage
+                </center> 
+                </h1>
             <hr>
         </header>
         <main>
@@ -49,6 +53,10 @@
             <p>&copy; Falguni Yadav | All Rights Reserved | 2024</p>
         </footer>
     </body>
+    </html>
+        </main>
+    </body>
+</html>
     </html>
         </main>
     </body>
