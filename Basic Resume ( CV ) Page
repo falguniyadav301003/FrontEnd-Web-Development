@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Falguni Yadav</title>
+</head>
+<body>
+    <h1>Falguni Yadav</h1>
+    <p>Email: <a href="mailto:falguniyadav1430@gmail.com">falguniyadav1430@gmail.com</a> | Phone: +91 7501756156</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/falguni-yadav-17620424a?utm_source=sha
+        re&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin.com/in/falguniyadav</a> |
+         GitHub: <a href="https://github.com/falguniyadav301003" target="_blank">github.com/falguniyadav301003</a></p>
+
+    <h2>About Me</h2>
+    <p>Computer Science graduate with strong skills in software development, data structures,
+         and algorithms. Passionate about developing efficient code and learning new technologies.</p>
+
+    <h2>Education</h2>
+    <p><strong>Secondary School</strong></p>
+    <p>St.Joseph's School,2022</p>
+    <p><strong>Bachelor of Science in Computer Science</strong></p>
+    <p>Adamas University, 2026</p>
+    <p>Relevant Courses: Data Structures, Algorithms, Database Management, Operating Systems, Web Development</p>
+
+    <h2>Projects</h2>
+    <h3>Basic Portfolio Website</h3>
+    <p>Description: Created a personal portfolio website using HTML, CSS, and JavaScript to showcase projects and skills.</p>
+
+    <h3>Simple Calculator App</h3>
+    <p>Description: Developed a web-based calculator using JavaScript that performs basic arithmetic operations.</p>
+
+    <h2>Skills</h2>
+    <ul>
+        <li>Programming Languages: Python, Java, C++</li>
+        <li>Web Development: HTML, CSS, JavaScript, React</li>
+        <li>Tools & Technologies: Git, Docker, SQL, Node.js</li>
+        <li>Problem Solving: Competitive programming, algorithm optimization</li>
+    </ul>
+    <h2>Experience</h2>
+    <p>No formal experience yet. Actively building projects and participating in coding challenges to develop practical skills.</p>
+    <footer>
+        <p>&copy; 2024 Falguni Yadav</p>
+    </footer>
+</body>
+</html>
