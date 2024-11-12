@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+</head>
+<body>
+    <header>
+        <h1>Our Pricing Plans</h1>
+        <p>Choose the plan that works best for you.</p>
+    </header>
+
+    <!-- Pricing Table Section -->
+    <section>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Price</th>
+                    <th>Features</th>
+                    <th>Subscribe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic</td>
+                    <td>$10/month</td>
+                    <td>Access to basic features</td>
+                    <td><a href="#subscribe">Subscribe</a></td>
+                </tr>
+                <tr>
+                    <td>Standard</td>
+                    <td>$20/month</td>
+                    <td>Access to basic and premium features</td>
+                    <td><a href="#subscribe">Subscribe</a></td>
+                </tr>
+                <tr>
+                    <td>Premium</td>
+                    <td>$30/month</td>
+                    <td>All features, priority support</td>
+                    <td><a href="#subscribe">Subscribe</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
