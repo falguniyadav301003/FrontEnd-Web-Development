@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Showcase</title>
+</head>
+<body>
+    <header>
+        <h1>Product Showcase</h1>
+        <nav>
+            <a href="#product1">Product 1</a> |
+            <a href="#product2">Product 2</a> |
+            <a href="#product3">Product 3</a>
+        </nav>
+    </header>
+
+    <!-- Product 1 -->
+    <section id="product1">
+        <h2>Product 1: Smartwatch</h2>
+        <img src="smartwatch.jpg" alt="Smartwatch" width="300">
+        <p><strong>Price:</strong> $199.99</p>
+        <p><strong>Description:</strong> This stylish smartwatch keeps you connected and tracks your health metrics. Fea
+            turing a sleek design, it provides real-time notifications, fitness tracking, and more.</p>
+    </section>
+
+    <!-- Product 2 -->
+    <section id="product2">
+        <h2>Product 2: Noise-Cancelling Headphones</h2>
+        <img src="headphones.jpg" alt="Noise-Cancelling Headphones" width="300">
+        <p><strong>Price:</strong> $149.99</p>
+        <p><strong>Description:</strong> Experience music like never before with top-tier noise-cancelling tech
+            nology. Perfect for work, travel, or just relaxing at home.</p>
+    </section>
+
+    <!-- Product 3 -->
+    <section id="product3">
+        <h2>Product 3: Portable Bluetooth Speaker</h2>
+        <img src="bluetooth-speaker.jpg" alt="Portable Bluetooth Speaker" width="300">
+        <p><strong>Price:</strong> $59.99</p>
+        <p><strong>Description:</strong> Compact and powerful, this Bluetooth speaker offers excellent sound qual
+            ity and is perfect for on-the-go music lovers.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Company Name. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:info@yourcompany.com">info@yourcompany.com</a></p>
+    </footer>
+</body>
+</html>
