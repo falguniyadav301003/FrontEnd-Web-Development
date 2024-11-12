@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+</head>
+<body>
+    <header>
+        <h1>Delicious Pancake Recipe</h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 cup all-purpose flour</li>
+            <li>2 tablespoons sugar</li>
+            <li>1 tablespoon baking powder</li>
+            <li>1/2 teaspoon salt</li>
+            <li>1 cup milk</li>
+            <li>1 egg</li>
+            <li>2 tablespoons melted butter</li>
+            <li>1 teaspoon vanilla extract</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>In a bowl, mix the flour, sugar, baking powder, and salt.</li>
+            <li>In a separate bowl, whisk the milk, egg, melted butter, and vanilla extract.</li>
+            <li>Pour the wet ingredients into the dry ingredients and mix until combined (do not overmix).</li>
+            <li>Heat a non-stick skillet over medium heat. Lightly grease if necessary.</li>
+            <li>Pour 1/4 cup of batter onto the skillet for each pancake. Cook until bubbles form on the surface and edges look set.</li>
+            <li>Flip and cook for another 1-2 minutes until golden brown.</li>
+            <li>Serve warm with syrup, fruit, or your favorite toppings.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Tips</h2>
+        <p>For fluffier pancakes, let the batter rest for 5-10 minutes before cooking. You can also add blueberries or c
+            hocolate chips for a twist!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
