@@ -1,63 +1,141 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>My Personal Webpage</title>
-    </head>
-    <body>
-        <header>
-            <h1>
-                <center>
-                    Welcome to My Personal Webpage
-                </center> 
-                </h1>
-            <hr>
-        </header>
-        <main>
-            <section id="About">
-                <h2>About Me</h2>
-                <p>Hi, I am Falguni Yadav ! I am a third year Computer Science student at Adamas University, Kolkata.
-                     I am passionate about software development, problem-solving, and exploring cutting-edge technologies.</p>
-            </section>
-            <section id="skills">
-                <h2>Skills</h2>
-                <ul>
-                    <li>Programming Languages: C, C++, Java, Python</li>
-                    <li>Web Development: HTML, CSS, JavaScript</li>
-                    <li>Data Structures and Algorithms</li>
-                    <li>Database Management: SQL,MongoDB</li>
-                    <li>UI/UX Design: Canva,figma</li>
-                </ul>
-            </section>
-            <section id="projects">
-                <h2>Projects</h2>
-                <ul>
-                    <li>Portfolio Website</li>
-                    <li>Facebook Desktop Views</li>
-                    <li>Carousel</li>
-                    <li>Calculator</li>
-                </ul>
-            </section>
-            <section id="contact">
-                <h2>Contact Me</h2>
-                <ul>
-                <li><strong>Phone no.:</strong> 7501756156</li>
-                <li><strong>Email:</strong> <a href="mailto:falguniyadav1430@gmail.com">falguniyadav1430@gmail.com</a> </li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/falguni-yadav-17620424a?u
-                    tm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Falguni Yadav</a></li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/falguniyadav301003" target="_blank">falguniyadav301003<a></li>
-            </ul>
-            </section>
-        </main>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Webpage</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #007BFF;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
+
+        /* Hover effect on list items */
+        ul li:hover {
+            color: #007BFF;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Personal Webpage</h1>
         <hr>
-        <footer>
-            <p>&copy; Falguni Yadav | All Rights Reserved | 2024</p>
-        </footer>
-    </body>
-    </html>
-        </main>
-    </body>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi, I am Falguni Yadav! I am a third-year Computer Science student at Adamas University, Kolkata. I am passionate about software development, problem-solving, and exploring cutting-edge technologies.</p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming Languages: C, C++, Java, Python</li>
+                <li>Web Development: HTML, CSS, JavaScript</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Database Management: SQL, MongoDB</li>
+                <li>UI/UX Design: Canva, Figma</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>Portfolio Website</li>
+                <li>Facebook Desktop Views</li>
+                <li>Carousel</li>
+                <li>Calculator</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <ul>
+                <li><strong>Phone:</strong> 7501756156</li>
+                <li><strong>Email:</strong> <a href="mailto:falguniyadav1430@gmail.com">falguniyadav1430@gmail.com</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/falguni-yadav-17620424a" target="_blank">Falguni Yadav</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/falguniyadav301003" target="_blank">falguniyadav301003</a></li>
+            </ul>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <p>&copy; Falguni Yadav | All Rights Reserved | 2024</p>
+    </footer>
+    <script>
+        // JavaScript for Interactivity
+        document.querySelectorAll('ul li').forEach(item => {
+            item.addEventListener('click', () => {
+                alert(`You clicked on: ${item.textContent}`);
+            });
+        });
+    </script>
+</body>
 </html>
-    </html>
+
         </main>
     </body>
 </html>
