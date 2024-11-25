@@ -4,21 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Falguni Yadav</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        h1, h2 {
+            color: #007BFF;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #f9f9f9;
+        }
+        .dark-mode h1, .dark-mode h2 {
+            color: #1e90ff;
+        }
+        .dark-mode a {
+            color: #1e90ff;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <h1>Falguni Yadav</h1>
     <p>Email: <a href="mailto:falguniyadav1430@gmail.com">falguniyadav1430@gmail.com</a> | Phone: +91 7501756156</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/falguni-yadav-17620424a?utm_source=sha
-        re&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin.com/in/falguniyadav</a> |
-         GitHub: <a href="https://github.com/falguniyadav301003" target="_blank">github.com/falguniyadav301003</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/falguniyadav301003" target="_blank">linkedin.com/in/falguniyadav</a> |
+       GitHub: <a href="https://github.com/falguniyadav301003" target="_blank">github.com/falguniyadav301003</a></p>
 
     <h2>About Me</h2>
     <p>Computer Science graduate with strong skills in software development, data structures,
-         and algorithms. Passionate about developing efficient code and learning new technologies.</p>
+       and algorithms. Passionate about developing efficient code and learning new technologies.</p>
 
     <h2>Education</h2>
     <p><strong>Secondary School</strong></p>
-    <p>St.Joseph's School,2022</p>
+    <p>St. Joseph's School, 2022</p>
     <p><strong>Bachelor of Science in Computer Science</strong></p>
     <p>Adamas University, 2026</p>
     <p>Relevant Courses: Data Structures, Algorithms, Database Management, Operating Systems, Web Development</p>
@@ -37,10 +89,22 @@
         <li>Tools & Technologies: Git, Docker, SQL, Node.js</li>
         <li>Problem Solving: Competitive programming, algorithm optimization</li>
     </ul>
+
     <h2>Experience</h2>
     <p>No formal experience yet. Actively building projects and participating in coding challenges to develop practical skills.</p>
+
+    <button id="toggleDarkMode">Toggle Dark Mode</button>
+
     <footer>
         <p>&copy; 2024 Falguni Yadav</p>
     </footer>
+
+    <script>
+        // JavaScript for Dark Mode Toggle
+        const toggleButton = document.getElementById('toggleDarkMode');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
