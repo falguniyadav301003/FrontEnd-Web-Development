@@ -4,6 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Table</title>
+    <!-- CSS for styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,7 +63,7 @@
 
     <!-- Pricing Table Section -->
     <section>
-        <table border="1">
+        <table>
             <thead>
                 <tr>
                     <th>Plan</th>
@@ -27,19 +77,19 @@
                     <td>Basic</td>
                     <td>$10/month</td>
                     <td>Access to basic features</td>
-                    <td><a href="#subscribe">Subscribe</a></td>
+                    <td><a href="#" onclick="subscribe('Basic')">Subscribe</a></td>
                 </tr>
                 <tr>
                     <td>Standard</td>
                     <td>$20/month</td>
                     <td>Access to basic and premium features</td>
-                    <td><a href="#subscribe">Subscribe</a></td>
+                    <td><a href="#" onclick="subscribe('Standard')">Subscribe</a></td>
                 </tr>
                 <tr>
                     <td>Premium</td>
                     <td>$30/month</td>
                     <td>All features, priority support</td>
-                    <td><a href="#subscribe">Subscribe</a></td>
+                    <td><a href="#" onclick="subscribe('Premium')">Subscribe</a></td>
                 </tr>
             </tbody>
         </table>
@@ -48,5 +98,13 @@
     <footer>
         <p>&copy; 2024 Your Company Name. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        function subscribe(plan) {
+            alert("You have chosen the " + plan + " plan. Thank you for subscribing!");
+        }
+    </script>
 </body>
 </html>
+
