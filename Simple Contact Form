@@ -1,82 +1,147 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
+    <!-- CSS for Styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        form {
+            width: 50%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: calc(100% - 20px);
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .feedback {
+            text-align: center;
+            margin-top: 10px;
+            color: #4CAF50;
+        }
+    </style>
 </head>
 <body>
     <h1><u>Contact Form</u></h1>
-    <form>
+    <form id="contactForm">
         <label for="fname">First Name:</label>
-        <input type="text"  name="firstname" placeholder="Enter your first name">
-    <br>
-    <br>
+        <input type="text" name="firstname" id="fname" placeholder="Enter your first name" required>
+        <br>
+
         <label for="lname">Last Name:</label>
-        <input type="text" name="lastname" placeholder="Enter your last name">
-    <br>
-    <br>
+        <input type="text" name="lastname" id="lname" placeholder="Enter your last name" required>
+        <br>
+
         <label for="email">Email:</label>
-        <input type="text"  name="email" placeholder="it should contain @...">
-    <br>
-    <br>
-        <label for="phone no.">Phone No.:</label>
-        <input type="number"  pattern="[0-9]{10}" minlength="10" maxlength="10" required
-         name="number" placeholder="it should contain 10 digits">
-    <br>
-    <br>
-    <label for="gender">Gender:</label>
-    <div>
-        <input type="radio" name="gender" value="male">
-        <label for="male">Male</label>
-        <input type="radio" name="gender" value="female">
-        <label for="female">Female</label>
-    </div>
-    <br>
-    <label for="dob">Date Of Birth:</label>
-    <input type="date" min="2012-12-12" max="2024-11-10"  name="dob" placeholder="mm/dd/yyyy">
-<br>
-<br>
-    <label for="address">Address:</label>
-    <br>
-   <textarea id="address" name="address" maxlength="500" rows="5" cols="30" placeholder="Enter your address" ></textarea>
-<br>
-<br>
-    <label for="state">State:</label>
-   <select name="state">
-    <option value="state">Select your State:</option>
-  <option value="Andhra Pradesh">Andhra Pradesh</option>
-  <option value="Gujarat">Gujarat</option>
-  <option value="Kerala">Kerala</option>
-  <option value="Maharashtra">Maharashtra</option>
-  <option value="Punjab">Punjab</option>
-  <option value="Tamil Nadu">Tamil Nadu</option>
-  <option value="Uttar Pradesh">Uttar Pradesh</option>
-  <option value="West Bengal">West Bengal</option>
-</select>
-<br>
-<br>
-<label for="pin">Pin Code:</label>
-<input type="text" name="pin" maxlength="6" pattern="[0-9]{6}" placeholder="Enter your area pin">
-<br>
-<br>
-<label for="city">City:</label>
-<input type="text" name="city" placeholder="Enter your city">
-<br>
-<br>
-<label for="qualification">Qualification:</label>
-<select name="qualification">
- <option value="Qualification">Select your Qualification:</option>
-  <option value="Undergraduate">Undergraduate</option>
-  <option value="Postgraduate">Postgraduate</option>
-  <option value="High School">High School</option>
-  <option value="Diploma">Diploma</option>
-</select>
-<br>
-<br>
+        <input type="email" name="email" id="email" placeholder="it should contain @..." required>
+        <br>
+
+        <label for="phone">Phone No.:</label>
+        <input type="number" name="number" id="phone" pattern="[0-9]{10}" minlength="10" maxlength="10" placeholder="it should contain 10 digits" required>
+        <br>
+
+        <label for="gender">Gender:</label>
+        <div>
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">Female</label>
+        </div>
+        <br>
+
+        <label for="dob">Date Of Birth:</label>
+        <input type="date" id="dob" name="dob" min="2012-12-12" max="2024-11-10" required>
+        <br>
+
+        <label for="address">Address:</label>
+        <br>
+        <textarea id="address" name="address" maxlength="500" rows="5" placeholder="Enter your address" required></textarea>
+        <br>
+
+        <label for="state">State:</label>
+        <select name="state" id="state" required>
+            <option value="">Select your State</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="West Bengal">West Bengal</option>
+        </select>
+        <br>
+
+        <label for="pin">Pin Code:</label>
+        <input type="text" name="pin" id="pin" maxlength="6" pattern="[0-9]{6}" placeholder="Enter your area pin" required>
+        <br>
+
+        <label for="city">City:</label>
+        <input type="text" name="city" id="city" placeholder="Enter your city" required>
+        <br>
+
+        <label for="qualification">Qualification:</label>
+        <select name="qualification" id="qualification" required>
+            <option value="">Select your Qualification</option>
+            <option value="Undergraduate">Undergraduate</option>
+            <option value="Postgraduate">Postgraduate</option>
+            <option value="High School">High School</option>
+            <option value="Diploma">Diploma</option>
+        </select>
+        <br>
+
         <label for="message">Feedback:</label>
         <br>
-        <textarea id="message" name="message" rows="4" cols="40" placeholder="enter your message"></textarea>
-    <br>
-    <br>
+        <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+        <br>
+
         <input type="submit" value="Submit">
     </form>
+
+    <div class="feedback" id="feedbackMessage"></div>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const firstName = document.getElementById('fname').value;
+            document.getElementById('feedbackMessage').innerText = `Thank you, ${firstName}, for submitting your details!`;
+        });
+    </script>
 </body>
 </html>
+
