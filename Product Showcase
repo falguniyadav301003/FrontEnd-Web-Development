@@ -4,6 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Showcase</title>
+    <!-- CSS for styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 80%;
+        }
+        section h2 {
+            color: #4CAF50;
+        }
+        section img {
+            display: block;
+            margin: 10px auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,8 +90,8 @@
         <h2>Product 1: Smartwatch</h2>
         <img src="smartwatch.jpg" alt="Smartwatch" width="300">
         <p><strong>Price:</strong> $199.99</p>
-        <p><strong>Description:</strong> This stylish smartwatch keeps you connected and tracks your health metrics. Fea
-            turing a sleek design, it provides real-time notifications, fitness tracking, and more.</p>
+        <p><strong>Description:</strong> This stylish smartwatch keeps you connected and tracks your health metrics. Featuring a sleek design, it provides real-time notifications, fitness tracking, and more.</p>
+        <button onclick="buyProduct('Smartwatch', 199.99)">Buy Now</button>
     </section>
 
     <!-- Product 2 -->
@@ -29,8 +99,8 @@
         <h2>Product 2: Noise-Cancelling Headphones</h2>
         <img src="headphones.jpg" alt="Noise-Cancelling Headphones" width="300">
         <p><strong>Price:</strong> $149.99</p>
-        <p><strong>Description:</strong> Experience music like never before with top-tier noise-cancelling tech
-            nology. Perfect for work, travel, or just relaxing at home.</p>
+        <p><strong>Description:</strong> Experience music like never before with top-tier noise-cancelling technology. Perfect for work, travel, or just relaxing at home.</p>
+        <button onclick="buyProduct('Noise-Cancelling Headphones', 149.99)">Buy Now</button>
     </section>
 
     <!-- Product 3 -->
@@ -38,12 +108,24 @@
         <h2>Product 3: Portable Bluetooth Speaker</h2>
         <img src="bluetooth-speaker.jpg" alt="Portable Bluetooth Speaker" width="300">
         <p><strong>Price:</strong> $59.99</p>
-        <p><strong>Description:</strong> Compact and powerful, this Bluetooth speaker offers excellent sound qual
-            ity and is perfect for on-the-go music lovers.</p>
+        <p><strong>Description:</strong> Compact and powerful, this Bluetooth speaker offers excellent sound quality and is perfect for on-the-go music lovers.</p>
+        <button onclick="buyProduct('Portable Bluetooth Speaker', 59.99)">Buy Now</button>
     </section>
 
     <footer>
         <p>&copy; 2024 Company Name. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:info@yourcompany.com">info@yourcompany.com</a></p>
+    </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        function buyProduct(productName, price) {
+            alert(`Thank you for choosing the ${productName}! The price is $${price}.`);
+        }
+    </script>
+</body>
+</html>
+
         <p>Contact us at <a href="mailto:info@yourcompany.com">info@yourcompany.com</a></p>
     </footer>
 </body>
