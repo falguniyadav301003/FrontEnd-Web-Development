@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Budget Tracker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      max-width: 450px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333333;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .balance {
+      background-color: #f0f4f8;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .form-group input,
+    .form-group select {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #d1d9e6;
+      border-radius: 5px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .form-group button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .form-group button:hover {
+      background-color: #0056b3;
+    }
+
+    .transactions {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .transactions li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f9f9f9;
+      border: 1px solid #e3e8ef;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .transactions li.income {
+      color: #28a745;
+    }
+
+    .transactions li.expense {
+      color: #dc3545;
+    }
+
+    .transactions span {
+      font-weight: 600;
+    }
+
+    @media (max-width: 480px) {
+      .form-group {
+        flex-direction: column;
+      }
+
+      .form-group input,
+      .form-group select {
+        width: 100%;
+      }
+
+      .form-group button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Budget Tracker</h1>
+    <div class="balance">
+      Balance: $<span id="balance">0.00</span>
+    </div>
+    <div class="form-group">
+      <input type="text" id="description" placeholder="Description">
+      <input type="number" id="amount" placeholder="Amount">
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <button onclick="addTransaction()">Add</button>
+    </div>
+    <ul id="transactions" class="transactions"></ul>
+  </div>
+
+  <script>
+    let balance = 0;
+
+    function addTransaction() {
+      const description = document.getElementById('description').value;
+      const amount = parseFloat(document.getElementById('amount').value);
+      const type = document.getElementById('type').value;
+
+      if (!description || isNaN(amount)) {
+        alert('Please enter valid inputs for description and amount.');
+        return;
+      }
+
+      const transactionList = document.getElementById('transactions');
+      const transaction = document.createElement('li');
+      transaction.className = type === 'income' ? 'income' : 'expense';
+      transaction.innerHTML = `
+        <span>${description}</span>
+        <span>${type === 'income' ? '+' : '-'}$${amount.toFixed(2)}</span>
+      `;
+
+      transactionList.appendChild(transaction);
+
+      balance += type === 'income' ? amount : -amount;
+      updateBalance();
+      clearInputs();
+    }
+
+    function updateBalance() {
+      document.getElementById('balance').textContent = balance.toFixed(2);
+    }
+
+    function clearInputs() {
+      document.getElementById('description').value = '';
+      document.getElementById('amount').value = '';
+      document.getElementById('type').value = 'income';
+    }
+  </script>
+</body>
+</html>
