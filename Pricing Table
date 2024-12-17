@@ -1,110 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing Table</title>
-    <!-- CSS for styling -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #4CAF50;
-            color: white;
-        }
-        table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        th, td {
-            padding: 15px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        tr:hover {
-            background-color: #f1f1f1;
-        }
-        a {
-            text-decoration: none;
-            color: #4CAF50;
-            font-weight: bold;
-        }
-        a:hover {
-            color: #45a049;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .quiz-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    #question {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .option {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .option:hover {
+      background: #0056b3;
+    }
+
+    #next-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #28a745;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #next-btn:hover {
+      background: #1e7e34;
+    }
+
+    #score {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Our Pricing Plans</h1>
-        <p>Choose the plan that works best for you.</p>
-    </header>
+  <div class="quiz-container">
+    <h1>Quiz App</h1>
+    <div id="quiz">
+      <p id="question">Question text will appear here.</p>
+      <div class="options">
+        <button class="option" onclick="selectAnswer(0)">Option 1</button>
+        <button class="option" onclick="selectAnswer(1)">Option 2</button>
+        <button class="option" onclick="selectAnswer(2)">Option 3</button>
+        <button class="option" onclick="selectAnswer(3)">Option 4</button>
+      </div>
+      <button id="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+    <p id="score" style="display: none;">Your score: <span>0</span></p>
+  </div>
+  <script>
+    const questions = [
+      {
+        question: "What is the capital of India?",
+        options: ["Lucknow", "Mumbai", "New Delhi", "Assam"],
+        answer: 2,
+      },
+      {
+        question: "What is 2 + 2?",
+        options: ["3", "4", "5", "6"],
+        answer: 1,
+      },
+      {
+        question: "Who wrote 'To Kill a Mockingbird'?",
+        options: ["Harper Lee", "Mark Twain", "J.K. Rowling", "Ernest Hemingway"],
+        answer: 0,
+      },
+    ];
 
-    <!-- Pricing Table Section -->
-    <section>
-        <table>
-            <thead>
-                <tr>
-                    <th>Plan</th>
-                    <th>Price</th>
-                    <th>Features</th>
-                    <th>Subscribe</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Basic</td>
-                    <td>$10/month</td>
-                    <td>Access to basic features</td>
-                    <td><a href="#" onclick="subscribe('Basic')">Subscribe</a></td>
-                </tr>
-                <tr>
-                    <td>Standard</td>
-                    <td>$20/month</td>
-                    <td>Access to basic and premium features</td>
-                    <td><a href="#" onclick="subscribe('Standard')">Subscribe</a></td>
-                </tr>
-                <tr>
-                    <td>Premium</td>
-                    <td>$30/month</td>
-                    <td>All features, priority support</td>
-                    <td><a href="#" onclick="subscribe('Premium')">Subscribe</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+    let currentQuestionIndex = 0;
+    let score = 0;
 
-    <footer>
-        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
-    </footer>
+    function loadQuestion() {
+      const questionElement = document.getElementById("question");
+      const optionButtons = document.querySelectorAll(".option");
 
-    <!-- JavaScript for interactivity -->
-    <script>
-        function subscribe(plan) {
-            alert("You have chosen the " + plan + " plan. Thank you for subscribing!");
+      const currentQuestion = questions[currentQuestionIndex];
+      questionElement.textContent = currentQuestion.question;
+
+      optionButtons.forEach((button, index) => {
+        button.textContent = currentQuestion.options[index];
+        button.disabled = false;
+        button.style.background = "#007bff";
+      });
+
+      document.getElementById("next-btn").style.display = "none";
+    }
+
+    function selectAnswer(index) {
+      const currentQuestion = questions[currentQuestionIndex];
+      const optionButtons = document.querySelectorAll(".option");
+
+      optionButtons.forEach((button, i) => {
+        button.disabled = true;
+        if (i === currentQuestion.answer) {
+          button.style.background = "#28a745"; // Correct answer
+        } else {
+          button.style.background = "#dc3545"; // Incorrect answer
         }
-    </script>
+      });
+
+      if (index === currentQuestion.answer) {
+        score++;
+      }
+
+      document.getElementById("next-btn").style.display = "inline-block";
+    }
+
+    function nextQuestion() {
+      currentQuestionIndex++;
+      if (currentQuestionIndex < questions.length) {
+        loadQuestion();
+      } else {
+        showScore();
+      }
+    }
+
+    function showScore() {
+      document.getElementById("quiz").style.display = "none";
+      const scoreElement = document.getElementById("score");
+      scoreElement.style.display = "block";
+      scoreElement.querySelector("span").textContent = score;
+    }
+
+    // Initialize the first question
+    loadQuestion();
+  </script>
 </body>
 </html>
-
