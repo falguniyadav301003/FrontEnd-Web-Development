@@ -1,0 +1,60 @@
+*{
+    margin: 0%;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-container{
+    color: darkblue;
+}
+
+.temp{
+    font-size: 4.5rem;
+}
+
+.time-location{
+    font-size: 2rem;
+}
+
+.time-location span{
+    font-size: 2rem;
+}
+
+.condition{
+    margin: 0.5rem;
+    margin-left: 0.2rem;
+}
+
+nav{
+    height: 100px;
+    margin: 5rem;
+}
+
+.search_area{
+    padding: 1rem 0;
+    outline: none;
+    border: none;
+    color: black;
+    background-color: transparent;
+    font-size: 1.1rem;
+    border-bottom: 2px solid purple;
+    width: 98%;
+}
+
+nav form button{
+    background-color: white;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem;
+}
