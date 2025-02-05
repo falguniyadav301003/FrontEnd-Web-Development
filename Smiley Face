@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realistic Smiley Face</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.face {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #ffcc33, #ffa511);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.left-eye, .right-eye {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 110px;
+}
+
+.left-eye {
+    left: 110px; 
+}
+
+.right-eye {
+    right: 110px;
+}
+
+.eye-reflection {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.blush {
+    width: 50px;
+    height: 25px;
+    background: rgba(255, 105, 97, 0.5);
+    border-radius: 50%;
+    position: absolute;
+    top: 180px;
+}
+
+.left-blush {
+    left: 80px;
+}
+
+.right-blush {
+    right: 80px;
+}
+
+.mouth {
+    width: 180px;
+    height: 90px;
+    background-color: transparent;
+    border-bottom: 10px solid brown;
+    border-radius: 0 0 90px 90px;
+    position: absolute;
+    top: 230px;
+    left: 110px;
+}
+    </style>
+</head>
+<body>
+    <div class="face">
+        <div class="blush left-blush"></div>
+        <div class="blush right-blush"></div>
+        <div class="eyes">
+            <div class="left-eye">
+                <div class="eye-reflection"></div>
+            </div>
+            <div class="right-eye">
+                <div class="eye-reflection"></div>
+            </div>
+        </div>
+        <div class="mouth"></div>
+    </div>
+</body>
+</html>
